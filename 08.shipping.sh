@@ -19,7 +19,7 @@ echo -e "$color creating shipping service file$nocolor"
 cp /root/practice-shell/shipping.service /etc/systemd/system/shipping.service
 echo -e "$color Downloading and installing the mysql schema$nocolor"
 yum install mysql -y &>>${logfile}
-mysql -h mysql-dev.nasreen.cloud -uroot -pRoboShop@1 < ${app_path}/schema/shipping.sql &>>${logfile}
+mysql -h mysql-dev.shaik.website -uroot -pRoboShop@1 < ${app_path}/schema/shipping.sql &>>${logfile}
 echo -e "$color Enabling and starting the shipping service$nocolor"
 systemctl daemon-reload
 systemctl enable shipping &>>${logfile}
