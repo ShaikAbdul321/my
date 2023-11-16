@@ -21,7 +21,7 @@ cp /root/practice-shell/user.service /etc/systemd/system/user.service
 echo -e "$color Downloading and installing the mongodb schema$nocolor"
 cp /root/practice-shell/mongodb.repo /etc/yum.repos.d/mongodb.repo
 yum install mongodb-org-shell -y  &>>${logfile}
-mongo --host mongodb-dev.nasreen.cloud <${app_path}/schema/user.js  &>>${logfile}
+mongo --host mongodb-dev.shaik.website <${app_path}/schema/user.js  &>>${logfile}
 echo -e "$color Enabling and starting the user service$nocolor"
 systemctl daemon-reload
 systemctl enable user &>>${logfile}
