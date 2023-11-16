@@ -21,7 +21,7 @@ cp /root/practice-shell/catalogue.service /etc/systemd/system/catalogue.service
 echo -e "$color Downloading and installing the mongodb schema$nocolor"
 cp /root/practice-shell/mongodb.repo /etc/yum.repos.d/mongodb.repo
 yum install mongodb-org-shell -y &>>$logfile
-mongo --host mongodb-dev.nasreen.cloud <${app_path}/schema/catalogue.js &>>$logfile
+mongo --host mongodb-dev.shaik.website <${app_path}/schema/catalogue.js &>>$logfile
 echo -e "$color Enabling and starting the catalogue service$nocolor"
 systemctl daemon-reload
 systemctl enable catalogue &>>$logfile
