@@ -4,7 +4,7 @@ logfile="/tmp/roboshop.log"
 app_path="/app"
 
 echo -e "$color Downloading Nodejs repo file$nocolor"
-curl -sL https://rpm.nodesource.com/setup_lts.x | bash &>>${logfile}
+curl -sL https://rpm.nodesource.com/setup_19.x | sudo -E bash - &>>${logfile}
 echo -e "$color Installing Nodejs server$nocolor"
 yum install nodejs -y &>>${logfile}
 echo -e "$color Adding user and location$nocolor"
